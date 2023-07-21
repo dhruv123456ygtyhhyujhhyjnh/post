@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <link rel="stylesheet" href="slider.css">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+<body>
+ <div class="image-container">
+ <img src="./coffe.png" id="content1" class="active">
+ <img src="./coffe4.jpg" id="content2">
+ <img src="./coffe2.png" id="content3">
+ <img src="./coffe3.png" id="content4">
+ </div>
+ <button id="first" onclick="first()"> &lt; </button>
+<button id="second" onclick="second()"> &gt; </button>
+ </body>
+ <script>
+    const images = document.querySelectorAll(".image-container img");
+let i = 0; 
+let j = 4;
+function first(){
+ document.getElementById("content" + (i+1)).classList.remove("active");
+ i = ( j + i + 1) % j;
+ document.getElementById("content" + (i+1)).classList.add("active");
+
+}
+function second(){
+ document.getElementById("content" + (i+1)).classList.remove("active");
+ i = (j + i - 1) % j;
+ document.getElementById("content" + (i+1)).classList.add("active"); 
+}
+ </script>
+</html>

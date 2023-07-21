@@ -1,0 +1,45 @@
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100px;
+}
+.image-container {
+    position: relative; 
+}
+
+img {
+    position: relative;
+    display: none;
+    height: 550px;
+    width: 100%;
+}
+
+.active {
+    display: block;
+}
+
+#first,
+#second {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    background-color: #8703af;
+    color: #0c0c0b;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    border: none;
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+#first {
+    left: 5px;
+}
+
+#second {
+    right: 5px;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <link rel="stylesheet" href="post1.css">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+<body>
+ <div class="main">
+ <div class="button-point">
+ <button onclick="first()">Coffe1</button>
+ <button onclick="second()">Coffe2</button>
+ <button onclick="third()">Coffe3</button>
+ </div>
+ <div class="image-container">
+ <img src="./coffe.png" id="content1" class="active">
+ <img src="./coffe2.png"id="content2">
+ <img src="./coffe3.png" id="content3">
+ </div>
+ </div>
+</body>
+<script>
+    function first(){
+ document.getElementById("content2").classList.remove("active")
+ document.getElementById("content3").classList.remove("active")
+ document.getElementById("content1").classList.add("active")
+
+}
+function second(){
+ document.getElementById("content1").classList.remove("active")
+ document.getElementById("content3").classList.remove("active")
+ document.getElementById("content2").classList.add("active")
+
+}
+function third(){
+ document.getElementById("content1").classList.remove("active")
+ document.getElementById("content2").classList.remove("active")
+ document.getElementById("content3").classList.add("active")
+
+} 
+
+</script>
+</html>
